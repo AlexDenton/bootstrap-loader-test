@@ -1,1 +1,3 @@
-app-2
+# To run
+npm install
+npm run start
