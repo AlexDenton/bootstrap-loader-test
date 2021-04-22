@@ -1,8 +1,12 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: [
+      // "bootstrap-loader/extractStyles",
+      "./src/index.js",
+  ],
   mode: "development",
   module: {
     rules: [
@@ -15,6 +19,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: `$buttonColor: blue;`,
+              includePaths: ["c:/git/bootstrap-loader-test"]
+            }
+          }
+        ]
       }
     ]
   },
@@ -30,5 +49,11 @@ module.exports = {
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: "css/[id].css"
+    })
+  ]
 };
