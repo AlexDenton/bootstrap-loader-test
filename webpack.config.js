@@ -30,7 +30,6 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: `$buttonColor: blue;`,
-              includePaths: ["c:/git/bootstrap-loader-test"]
             }
           }
         ]
