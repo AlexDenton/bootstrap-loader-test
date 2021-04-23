@@ -1,0 +1,51 @@
+@import '~bootstrap/scss/functions';
+
+/* Customize Bootstrap variables that get imported before the original Bootstrap variables.*/
+
+$headings-font-family:    'Tungsten A', 'Tungsten B', 'Helvetica', Arial, sans-serif;
+$font-family-base:        'Gotham SSm A', 'Gotham SSm B', 'Helvetica' , Arial, sans-serif;
+
+$border-radius-small:           2px;
+$border-radius-base:            3px;
+$border-radius-large:           4px;
+
+/* Bootstrap 4 grid override*/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px, /* smaller than this is mobile (default), larger than this is tablet & desktop (we use the same styling for them) */
+  lg: 992px,
+  xl: 1240px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           24px;
+
+$enable-grid-classes:       true;
+
+$brand-primary: #3DBAB7;
+$font-family-sans-serif:    $font-family-base;
+
+$navbar-default-bg: transparent;
+$navbar-default-border: none;
+
+$navbar-margin-bottom: 0;
+$navbar-inverse-bg: #fff;
+
+$padding-base-vertical:    13px;
+$padding-base-horizontal:  15px;
+
+$border-radius-base:        2px;
+$border-radius-large:       2px;
+$border-radius-small:       2px;
+
+$btn-font-weight: 500;
+
+$grid-float-breakpoint: 0px;

@@ -1,6 +1,6 @@
 ---
 # Output debugging info
-# loglevel: debug
+loglevel: debug
 
 # Major version of Bootstrap: 3 or 4
 bootstrapVersion: 4
@@ -12,7 +12,7 @@ useCustomIconFontPath: false
 styleLoaders:
 # - style-loader
   - css-loader
-  - sass-loader?precision=10
+  - sass-loader
 
 # Extract styles to stand-alone css file
 # Different settings for different environments can be used,
@@ -41,7 +41,7 @@ styleLoaders:
 # Import your custom styles here
 # Usually this endpoint-file contains list of @imports of your application styles
 #
-appStyles: ./src/App.scss
+# appStyles: ./assets/global.scss
 
 ### Bootstrap styles
 styles:
@@ -50,45 +50,45 @@ styles:
   mixins: true
 
   # Reset and dependencies
-  print: true
+  print: false
 
   # Core CSS
   buttons: true
-  code: true
-  forms: true
-  grid: true
-  images: true
-  reboot: true
-  tables: true
-  type: true
+  code: false
+  forms: false
+  grid: false
+  images: false
+  reboot: false
+  tables: false
+  type: false
 
   # Components
-  alert: true
-  badge: true
-  breadcrumb: true
-  button-group: true
-  card: true
-  close: true
-  custom-forms: true
-  dropdown: true
-  input-group: true
-  jumbotron: true
-  list-group: true
-  media: true
-  nav: true
-  navbar: true
-  pagination: true
-  progress: true
-  transitions: true
+  alert: false
+  badge: false
+  breadcrumb: false
+  button-group: false
+  card: false
+  close: false
+  custom-forms: false
+  dropdown: false
+  input-group: false
+  jumbotron: false
+  list-group: false
+  media: false
+  nav: false
+  navbar: false
+  pagination: false
+  progress: false
+  transitions: false
 
   # Components w/ JavaScript
-  carousel: true
-  modal: true
-  popover: true
-  tooltip: true
+  carousel: false
+  modal: false
+  popover: false
+  tooltip: false
 
   # Utility classes
-  utilities: true
+  utilities: false
 
 ### Bootstrap scripts
 scripts: false
